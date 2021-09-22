@@ -2,6 +2,16 @@
 
 VCS API for GitHub
 
+## Submodule Initialization ##
+
+```bash
+git clone "https://github.com/cloud-hybrid/cloud-technology.git" "./cloud-technology-2"
+
+cd "${_}" && git submodule init
+
+git submodule update
+```
+
 ## NPM Public Registry Setup ##
 
 ```bash
