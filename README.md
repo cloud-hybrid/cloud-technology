@@ -9,7 +9,7 @@ git clone "https://github.com/cloud-hybrid/cloud-technology.git" "./cloud-techno
 
 cd "${_}" && git submodule init
 
-git submodule update
+git submodule update --remote
 ```
 
 ## NPM Public Registry Setup ##
