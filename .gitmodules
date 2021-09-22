@@ -1,8 +1,12 @@
 [submodule "packages/github-api"]
 	path = packages/github-api
 	url = https://github.com/cloud-hybrid/github-api.git
+	branch = Development
 	update = rebase
+	rebase = true
 [submodule "packages/cli"]
 	path = packages/cli
 	url = https://github.com/cloud-hybrid/cli.git
+	branch = Development
 	update = rebase
+	rebase = true
