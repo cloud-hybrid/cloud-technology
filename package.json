@@ -19,7 +19,6 @@
         ]
     },
     "devDependencies": {
-        "@cloud-technology/cli": "^0.0.6",
         "@cloud-technology/github-api": "workspaces:packages/github-api",
         "@babel/core": "^7.15.5",
         "@babel/plugin-proposal-class-properties": "^7.14.5",
