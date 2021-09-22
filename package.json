@@ -1,0 +1,17 @@
+{
+    "name": "cloud-technology",
+    "version": "0.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cloud-hybrid/cloud-technology.git",
+        "directory": "."
+    },
+    "license": "BSD-3-Clause",
+    "bugs": {
+        "url": "https://github.com/cloud-hybrid/cloud-technology/issues"
+    },
+    "homepage": "https://github.com/cloud-hybrid/cloud-technology#readme",
+    "workspaces": {
+        "packages": [  ]
+    }
+}
