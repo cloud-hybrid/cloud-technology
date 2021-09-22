@@ -12,19 +12,9 @@
             "utilities/*"
         ]
     },
-    "bundledDependencies": [
-        "workspaces:packages/cli",
-        "workspaces:packages/parser",
-        "workspaces:packages/github-api"
-    ],
     "devDependencies": {
-        "@babel/core": "^7.15.5",
-        "core-js": "^3.18.0",
-        "env-cmd": "^10.1.0",
-        "eslint": "^7.32.0",
-        "jest": "^27.2.1",
-        "lint-staged": "^11.1.1",
-        "prettier": "^2.4.1",
-        "stylelint": "^13.13.1"
+        "@cloud-technology/cli": "workspaces:packages/cli",
+        "@cloud-technology/parser": "workspaces:packages/parser",
+        "@cloud-technology/github-api": "workspaces:packages/github-api"
     }
 }
