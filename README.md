@@ -12,8 +12,8 @@ cd "${_}" && git submodule init
 git config --global pull.rebase false
 
 git submodule update
-git submodule foreach git checkout Development 
-git submodule foreach git pull origin Development
+git submodule foreach --recursive git checkout "$(git rev-parse --abbrev-ref HEAD)" 
+git submodule foreach --recursive git pull origin "$(git rev-parse --abbrev-ref HEAD)"
 ```
 
 ## NPM Public Registry Setup ##
