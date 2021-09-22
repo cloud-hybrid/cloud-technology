@@ -12,12 +12,11 @@
             "utilities/*"
         ]
     },
-    "bundledDependencies": [
+    "dependencies": [
         "workspaces:packages/cli",
         "workspaces:packages/parser",
         "workspaces:packages/github-api"
     ],
-    "dependencies": { },
     "devDependencies": {
         "@babel/core": "^7.15.5",
         "core-js": "^3.18.0",
