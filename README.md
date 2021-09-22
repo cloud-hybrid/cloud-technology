@@ -5,7 +5,7 @@ Cloud Technology LLC's `Node.js` Packaged Systems & Utilities
 ## Setup & Initialization ##
 
 ```bash
-git clone "https://github.com/cloud-hybrid/cloud-technology.git" "./cloud-technology-2"
+git clone "https://github.com/cloud-hybrid/cloud-technology.git" "./cloud-technology"
 
 cd "${_}" && git submodule init
 
