@@ -1,3 +1,4 @@
 [submodule "packages/github-api"]
 	path = packages/github-api
 	url = https://github.com/cloud-hybrid/github-api.git
+	branch = Development
