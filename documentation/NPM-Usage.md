@@ -1,9 +1,23 @@
-## NPM ##
+# NPM #
 
-- [**NPM Usage & Reference**](#npm)
-    - [*Private Registry Setup*](#private-registry-setup)
+NPM Usage, Reference, & Setup(s)
 
-### Public Registry Setup ###
+## Table of Contents ##
+
+- [**Usage & Reference**](#npm)
+    - [*Package Registries*](#Registries)
+        - [Public Registry Setup](#public-setup)
+        - [Private Registry Setup](#private-setup)
+    - [*CI Usage & Deployable(s)*](#ci)
+        - [Shrinkwrap](#shrinkwrap) 
+    - [*Organizational Scope(s)*](#scopes)
+        - [Overview](#overview)
+        - [Installing Scopes](#installing-scoped-packages)
+        - [Using Scoped Packages](#requiring-scoped-packages)
+
+## Registries ##
+
+### Public Setup ###
 
 ```bash
 npm adduser --registry "https://registry.npmjs.com"
@@ -11,16 +25,18 @@ npm login --scope "@cloud-technology"
 npm publish --access "public"
 ```
 
-### Private Registry Setup ###
+### Private Setup ###
 
 ```bash
 npm config set "@cloud-technology:registry" "https://gitlab.cloud-technology.io/api/v4/packages/npm/" --location "project"
 npm config set -- "//gitlab.cloud-technology.io/api/v4/packages/npm/:_authToken" "[Personal-Access-Token]" --location "user"
 ```
 
-### CI ###
+## CI ##
 
-`npm ci`
+```npm
+npm ci
+```
 
 The `npm ci` command is similar to `npm install`, except it's meant to be used in automated environments such as test platforms, continuous integration, and
 deployment(s) -- or any situation where a clean installation of `node_modules`, `pnp`, `.yarn`, or other dependencies is desired.
@@ -38,7 +54,7 @@ In short, the main differences between using `npm install` and `npm ci` are:
 
 ### Shrinkwrap ###
 
-```bash
+```npm
 npm shrinkwrap
 ```
 
@@ -56,22 +72,22 @@ In contrast, `npm-shrinkwrap.json` allows publication, and defines the dependenc
 If both `package-lock.json` and `npm-shrinkwrap.json` are present in the root of a project, `npm-shrinkwrap.json` will take precedence and
 `package-lock.json` will be ignored.
 
-### Scope(s) ###
+## Scope(s) ##
 
-#### Description ####
+### Overview ###
 
 All npm packages have a name. Some package names also have a scope. A scope follows the usual rules for package names. When used in package names, scopes are
 preceded by an `@` symbol and followed by a slash, e.g. `@scope/package`.
 
 Scopes are a way of grouping related packages together, and also affect a few things about the way npm treats the package.
 
-#### Installing Scoped Packages ####
+### Installing Scoped Packages ###
 
 Scoped packages are installed to a sub-folder of the regular installation folder, e.g. if your other packages are installed in `node_modules/package`, scoped
 modules will be installed in `node_modules/@organization/package`. The scope folder (`@organization`) is simply the name of the scope preceded by an `@` symbol,
 and can contain any number of scoped packages.
 
-#### Requiring Scoped Packages ####
+### Requiring Scoped Packages ###
 
 Because scoped packages are installed into a scope folder, users have to include the name of the scope when requiring them in code, e.g.
 
