@@ -5,13 +5,11 @@
     "license": "BSD-3-Clause",
     "readme": "README.md",
     "repository": "git+https://github.com/cloud-hybrid/cloud-technology.git",
-    "workspaces": {
-        "packages": [
-            "packages/*",
-            "documentation/*",
-            "utilities/*"
-        ]
-    },
+    "workspaces": [
+        "packages/*",
+        "documentation/*",
+        "utilities/*"
+    ],
     "devDependencies": {
         "@cloud-technology/cli": "workspaces:packages/cli",
         "@cloud-technology/parser": "workspaces:packages/parser",
