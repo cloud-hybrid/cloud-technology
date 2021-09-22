@@ -14,6 +14,7 @@
     },
     "bundledDependencies": [
         "workspaces:packages/cli",
+        "workspaces:packages/parser",
         "workspaces:packages/github-api"
     ],
     "dependencies": { },

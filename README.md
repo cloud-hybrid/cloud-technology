@@ -1,6 +1,6 @@
-# LLC's `Node.js` Systems & Utilities #
+# Cloud Technology #
 
-Cloud Technology LLC's `Node.js` Systems & Utilities
+Cloud Technology LLC's `Node.js` Packaged Systems & Utilities
 
 ## Setup & Initialization ##
 

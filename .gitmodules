@@ -10,3 +10,9 @@
 	branch = Development
 	update = rebase
 	rebase = true
+[submodule "packages/parser"]
+	path = packages/parser
+	url = https://github.com/cloud-hybrid/parser.git
+	branch = Development
+	update = rebase
+	rebase = true
