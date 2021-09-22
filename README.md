@@ -19,6 +19,9 @@ git submodule foreach --recursive git pull origin "$(git rev-parse --abbrev-ref 
 
 ## NPM ##
 
+- [**NPM Usage & Reference**](./documentation/NPM-Usage.md)
+    - [*Private Registry Setup*](./documentation/NPM-Usage.md#private-registry-setup)
+
 ### Public Registry Setup ###
 
 ```bash
