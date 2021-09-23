@@ -22,3 +22,9 @@
 	branch = Development
     update = rebase
     rebase = true
+[submodule "packages/state-machine"]
+	path = packages/state-machine
+	url = https://github.com/cloud-hybrid/state-machine.git
+	branch = Development
+    update = rebase
+    rebase = true
