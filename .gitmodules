@@ -20,5 +20,5 @@
 	path = packages/subprocess-handler
 	url = https://github.com/cloud-hybrid/subprocess-handler.git
 	branch = Development
-        update = rebase
-        rebase = true
+    update = rebase
+    rebase = true
