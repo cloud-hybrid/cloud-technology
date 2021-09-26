@@ -1,9 +1,6 @@
 [submodule "packages/github-api"]
 	path = packages/github-api
 	url = https://github.com/cloud-hybrid/github-api.git
-	branch = Development
-	update = rebase
-	rebase = true
 [submodule "packages/subprocess-handler"]
 	path = packages/subprocess-handler
 	url = https://github.com/cloud-hybrid/subprocess-handler.git
@@ -19,3 +16,6 @@
 [submodule "utilities/parser"]
 	path = utilities/parser
 	url = https://github.com/cloud-hybrid/parser.git
+[submodule "utilities/subprocess-handler"]
+	path = utilities/subprocess-handler
+	url = https://github.com/cloud-hybrid/subprocess-handler.git

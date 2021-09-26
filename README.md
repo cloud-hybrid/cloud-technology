@@ -17,6 +17,90 @@ git submodule foreach git checkout "$(git rev-parse --abbrev-ref HEAD)"
 git submodule foreach git pull origin "$(git rev-parse --abbrev-ref HEAD)"
 ```
 
+## Workspaces ##
+
+### Creating a Workspace ###
+
+In order to add or create a workspace, either instantiate the folder +
+NPM-compliant package structure, or run the following command:
+
+```bash
+npm init --yes --workspace "[Workspace-Name]"
+```
+
+The workspace name can also be a relative path:
+
+```bash
+npm init --yes --workspace "./packages/[Workspace-Name]"
+```
+
+As well as a wildcard:
+
+```bash
+npm init --yes --workspace "./packages/[Workspace-Name]/*"
+```
+
+### Managing Specific Workspace(s) ###
+
+**Adding a Dependency Package**:
+
+```bash
+npm install "[Dependency]" --workspace "[Workspace-Name]" ? --save-dev
+```
+
+**Building a specific Workspace**:
+
+```bash
+npm ci --workspace "[Workspace-Name]"
+```
+
+### Running Localized Workspace Commands ###
+
+**Example (React Application):**
+
+```bash
+npm run start --workspace packages/ui-template
+npm run build --workspace packages/ui-template
+```
+
+#### Overview ####
+
+Every package has the capability to run `scripts`, and given the specifities of 
+how [Node.js handles module resolution](https://nodejs.org/dist/latest-v14.x/docs/api/modules.html#modules_all_together), 
+it's possible to consume any defined workspace by it's declared `package.json` name.
+
+Similar to an import, such defined `scripts` can be ran from the root package as 
+if the current-working-directory were already localized to the target module.
+
+```javascript
+// ./packages/ui-menu/index.js
+module.exports = () => (<DOM/>);
+
+/// --- ///
+
+// ./packages/ui-shell/index.js
+const Menu = require("@cloud-technology/ui-menu");
+
+...
+
+const DOM = () => {
+    return (
+        <>
+            <Menu/>
+            <Shell/>
+        </>
+    );
+};
+            
+module.exports = () => (<DOM/>);
+```
+
+Lastly,
+
+```bash
+npm run start --workspace "./packages/ui-shell"
+```
+
 ## NPM ##
 
 - [**Usage & Reference**](./documentation/NPM-Usage.md#npm)
