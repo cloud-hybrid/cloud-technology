@@ -10,7 +10,7 @@
         "documentation/*",
         "utilities/*"
     ],
-    "devDependencies": {
+    "dependencies": {
         "@cloud-technology/cli": "workspaces:packages/cli",
         "@cloud-technology/github-api": "workspaces:packages/github-api",
         "@cloud-technology/parser": "workspaces:packages/parser",
