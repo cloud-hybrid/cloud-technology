@@ -4,33 +4,18 @@
 	branch = Development
 	update = rebase
 	rebase = true
-[submodule "packages/cli"]
-	path = packages/cli
-	url = https://github.com/cloud-hybrid/cli.git
-	branch = Development
-	update = rebase
-	rebase = true
-[submodule "packages/parser"]
-	path = packages/parser
-	url = https://github.com/cloud-hybrid/parser.git
-	branch = Development
-	update = rebase
-	rebase = true
 [submodule "packages/subprocess-handler"]
 	path = packages/subprocess-handler
 	url = https://github.com/cloud-hybrid/subprocess-handler.git
-	branch = Development
-    update = rebase
-    rebase = true
-[submodule "packages/state-machine"]
-	path = packages/state-machine
-	url = https://github.com/cloud-hybrid/state-machine.git
-	branch = Development
-    update = rebase
-    rebase = true
 [submodule "packages/systems-manager"]
 	path = packages/systems-manager
 	url = https://github.com/cloud-hybrid/systems-manager.git
 [submodule "packages/ui-template"]
 	path = packages/ui-template
 	url = https://github.com/cloud-hybrid/ui-template.git
+[submodule "utilities/cli"]
+	path = utilities/cli
+	url = https://github.com/cloud-hybrid/cli.git
+[submodule "utilities/parser"]
+	path = utilities/parser
+	url = https://github.com/cloud-hybrid/parser.git
