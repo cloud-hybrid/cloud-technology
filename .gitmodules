@@ -19,3 +19,6 @@
 [submodule "utilities/subprocess-handler"]
 	path = utilities/subprocess-handler
 	url = https://github.com/cloud-hybrid/subprocess-handler.git
+[submodule "packages/carbon"]
+	path = packages/carbon
+	url = https://github.com/carbon-design-system/carbon-tutorial.git

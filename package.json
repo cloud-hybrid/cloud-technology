@@ -10,12 +10,29 @@
         "documentation/*",
         "utilities/*"
     ],
+    "scripts": {
+        "start.ui-template": "npm run start --workspace packages/ui-template",
+        "build.ui-template": "npm run build --workspace packages/ui-template",
+        "install.ui-template": "npm install --workspace packages/ui-template",
+        "start.carbon-tutorial": "npm run start --workspace packages/carbon",
+        "build.carbon-tutorial": "npm run build --workspace packages/carbon",
+        "install.carbon-tutorial": "npm install --workspace packages/carbon"
+    },
+    "bundledDependencies": [
+        "workspaces:packages/cli",
+        "workspaces:packages/github-api",
+        "workspaces:packages/parser",
+        "workspaces:packages/subprocess-handler",
+        "workspaces:packages/systems-manager",
+        "workspaces:packages/ui-template",
+        "workspaces:packages/carbon"
+    ],
     "dependencies": {
-        "@cloud-technology/cli": "workspaces:utilities/cli",
-        "@cloud-technology/github-api": "workspaces:packages/github-api",
-        "@cloud-technology/parser": "workspaces:utilities/parser",
-        "@cloud-technology/subprocess-handler": "workspaces:utilities/subprocess-handler",
-        "@cloud-technology/systems-manager": "workspaces:packages/systems-manager",
-        "@cloud-technology/ui-template": "workspaces:packages/ui-template"
+        "@cloud-technology/cli": "/cloud-hybrid/cli",
+        "@cloud-technology/github-api": "/cloud-hybrid/github-api",
+        "@cloud-technology/parser": "/cloud-hybrid/parser",
+        "@cloud-technology/subprocess-handler": "/cloud-hybrid/subprocess-handler",
+        "@cloud-technology/systems-manager": "/cloud-hybrid/systems-manager",
+        "@cloud-technology/ui-template": "/cloud-hybrid/ui-template"
     }
 }
