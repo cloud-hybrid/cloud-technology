@@ -22,3 +22,4 @@
 [submodule "packages/carbon"]
 	path = packages/carbon
 	url = https://github.com/carbon-design-system/carbon-tutorial.git
+	branch = v11-react-step-5
