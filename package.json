@@ -14,11 +14,7 @@
         "start.ui-template": "cd ./packages/ui-template && npm run start",
         "build.ui-template": "cd ./packages/ui-template && npm run build",
         "install.ui-template": "cd ./packages/ui-template && npm install .",
-        "serve.ui-template": "cd ./packages/ui-template && serve -s ./build",
-        "start.carbon-tutorial": "cd ./packages/carbon && npm run start",
-        "build.carbon-tutorial": "cd ./packages/carbon && npm run build",
-        "install.carbon-tutorial": "cd ./packages/carbon && npm install .",
-        "serve.development.carbon-tutorial": "serve -s ./packages/carbon/build"
+        "serve.ui-template": "cd ./packages/ui-template && serve -s ./build"
     },
     "bundledDependencies": [
         "workspaces:packages/cli",
@@ -26,7 +22,6 @@
         "workspaces:packages/parser",
         "workspaces:packages/subprocess-handler",
         "workspaces:packages/systems-manager",
-        "workspaces:packages/ui-template",
-        "workspaces:packages/carbon"
+        "workspaces:packages/ui-template"
     ]
 }
