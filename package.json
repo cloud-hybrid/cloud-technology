@@ -4,18 +4,18 @@
     "private": true,
     "license": "BSD-3-Clause",
     "readme": "README.md",
-    "repository": "git+https://github.com/cloud-hybrid/cloud-technology.git",
-    "workspaces": [
-        "packages/*",
-        "documentation/*",
-        "utilities/*"
-    ],
     "scripts": {
         "start.ui-template": "cd ./packages/ui-template && npm run start",
         "build.ui-template": "cd ./packages/ui-template && npm run build",
         "install.ui-template": "cd ./packages/ui-template && npm install .",
         "serve.ui-template": "cd ./packages/ui-template && serve -s ./build"
     },
+    "repository": "git+https://github.com/cloud-hybrid/cloud-technology.git",
+    "workspaces": [
+        "packages/*",
+        "documentation/*",
+        "utilities/*"
+    ],
     "bundledDependencies": [
         "workspaces:packages/*"
     ]
