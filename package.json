@@ -17,11 +17,6 @@
         "serve.ui-template": "cd ./packages/ui-template && serve -s ./build"
     },
     "bundledDependencies": [
-        "workspaces:packages/cli",
-        "workspaces:packages/github-api",
-        "workspaces:packages/parser",
-        "workspaces:packages/subprocess-handler",
-        "workspaces:packages/systems-manager",
-        "workspaces:packages/ui-template"
+        "workspaces:packages/*"
     ]
 }

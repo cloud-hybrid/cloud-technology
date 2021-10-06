@@ -23,3 +23,6 @@
 	path = packages/carbon
 	url = https://github.com/carbon-design-system/carbon-tutorial.git
 	branch = v11-react-step-5
+[submodule "packages/backend-api"]
+	path = packages/backend-api
+	url = https://github.com/cloud-hybrid/backend-api.git

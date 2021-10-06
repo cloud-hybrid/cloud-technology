@@ -1,5 +1,3 @@
-# Logging #
-
 logs
 *.log
 npm-debug.log*
@@ -7,96 +5,75 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Diagnostics #
-
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
-
-# Runtime #
 
 pids
 *.pid
 *.seed
 *.pid.lock
 
-# Linting && Coverage Libraries #
-
 lib-cov
 
-# Coverage #
-
-.nyc_output
 coverage
 *.lcov
 
-
-# Grunt Storage #
+.nyc_output
 
 .grunt
 
-# `node-waf` Configuration #
+bower_components
 
 .lock-wscript
 
-# Dependency Directories #
+build/Release
 
 node_modules/
 jspm_packages/
 
-# Types #
-
-type/
-types/
 typings/
 
-.node_repl_history
-
-.yarn-integrity
-
-# Environment Variable(s) #
-
-.env
-*.env
-
-.env.*
-*.env.*
-
-*.local
-
-.env.*.local
-.env.*.local.*
-
-.env.test
-.env.test.*
-
-# Caches #
+*.tsbuildinfo
 
 .npm
 
 .eslintcache
-
-.cache
-.cache/
-.caches/
 
 .rpt2_cache/
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
 
-# Next #
+.node_repl_history
+
+*.tgz
+
+.yarn-integrity
+
+.env.test
+.env.local
+.env.staging.local
+.env.production.local
+.env.development.local
+
+.cache
 
 .next
 
-# Distribution #
+.nuxt
 
 dist
-build
-*.tgz
-*.tsbuildinfo
 
-build/Release
+.cache/
 
-# System & IDE #
+.vuepress/dist
+
+.serverless/
+
+.fusebox/
+
+.dynamodb/
+
+.tern-port
 
 .DS_Store
 
