@@ -5,7 +5,7 @@ Cloud Technology LLC's `Node.js` Packaged Systems & Utilities
 ## Setup & Initialization ##
 
 ```bash
-git clone "https://github.com/cloud-hybrid/cloud-technology.git" "./cloud-technology"
+git clone "https://github.com/cloud-hybrid/cloud-technology.git" ./cloud-technology
 
 cd "${_}" && git submodule init
 
@@ -13,7 +13,7 @@ cd "${_}" && git submodule init
 git config --file ".gitconfig" pull.rebase false
 
 git submodule update --recursive
-git submodule foreach git checkout "$(git rev-parse --abbrev-ref HEAD)" 
+git submodule foreach git checkout "$(git rev-parse --abbrev-ref HEAD)"
 git submodule foreach git pull origin "$(git rev-parse --abbrev-ref HEAD)"
 ```
 
@@ -65,11 +65,11 @@ npm run build --workspace packages/ui-template
 
 #### Overview ####
 
-Every package has the capability to run `scripts`, and given the specifities of 
-how [Node.js handles module resolution](https://nodejs.org/dist/latest-v14.x/docs/api/modules.html#modules_all_together), 
+Every package has the capability to run `scripts`, and given the specifities of
+how [Node.js handles module resolution](https://nodejs.org/dist/latest-v14.x/docs/api/modules.html#modules_all_together),
 it's possible to consume any defined workspace by it's declared `package.json` name.
 
-Similar to an import, such defined `scripts` can be ran from the root package as 
+Similar to an import, such defined `scripts` can be ran from the root package as
 if the current-working-directory were already localized to the target module.
 
 ```javascript
@@ -91,7 +91,7 @@ const DOM = () => {
         </>
     );
 };
-            
+
 module.exports = () => (<DOM/>);
 ```
 
