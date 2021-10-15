@@ -16,7 +16,7 @@ Removing `git` tracking from commonly found `json-mock` server file(s) & directo
 - `routes.json`
 - `public`
 
-*is currently under consideration*.
+*is currently under consideration*. At the moment, these files *are* being untracked.
 
 ## Usage ##
 
