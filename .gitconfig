@@ -1,7 +1,7 @@
 ; git config --file .gitconfig --list
 
 [core]
-    hooksPath = "./utilities/git-hooks"
+	hooksPath = "./utilities/git-hooks"
 
 [pull]
 	rebase = false
