@@ -2,6 +2,12 @@
 
 Cloud Technology LLC's `Node.js` Packaged Systems & Utilities
 
+## Ideas ##
+
+- [ ] File-System "Database" system for CMS or Form CMS using Python's Pickled
+Data Type(s) + S3 Remote Storage
+-
+
 ## Setup & Initialization ##
 
 ```bash
