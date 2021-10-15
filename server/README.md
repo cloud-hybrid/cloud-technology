@@ -7,14 +7,12 @@
 ### Setup ###
 
 1. Install
-
     ```bash
     npm install --global json-server
     ```
 
 2. Establish a Database Schema
     - `db.json`:
-
     ```json
     {
         "posts": [
@@ -42,6 +40,21 @@ json-server https://organization.io/private/api/endpoint
 
 ### Adding Custom Routes ###
 
+`db.json`
+
+```json
+{
+    "posts": [
+        { "id": 1, "title": "json-server", "author": "typicode" }
+    ],
+    "comments": [
+        { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+}
+```
+`routes.json`
+
 ```json
 {
     "/api/*": "/$1",
@@ -51,7 +64,7 @@ json-server https://organization.io/private/api/endpoint
 }
 ```
 
-Then start the server
+#### Command ####
 
 ```bash
 json-server db.json --routes routes.json
