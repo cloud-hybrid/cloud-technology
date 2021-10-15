@@ -26,3 +26,6 @@
 [submodule "packages/backend-api"]
 	path = packages/backend-api
 	url = https://github.com/cloud-hybrid/backend-api.git
+[submodule "packages/health-check"]
+	path = packages/health-check
+	url = https://github.com/cloud-hybrid/health-check.git
