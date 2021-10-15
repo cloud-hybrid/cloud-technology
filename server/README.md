@@ -2,6 +2,22 @@
 
 *A Mock Back-End Server*
 
+## Notice ##
+
+**Please Note**: Everything *programmatically* in the [`@cloud-technology/server`](https://github.com/cloud-hybrid/cloud-technology/tree/Development/server)
+package/directory is *used only for local development*; the state of the package is subject to change at anytime,
+so zero expectations should be had when using.
+
+However, documentation is always updated and should be used for reference.
+
+Removing `git` tracking from commonly found `json-mock` server file(s) & directories such as
+
+- `db.json`
+- `routes.json`
+- `public`
+
+*is currently under consideration*.
+
 ## Usage ##
 
 ### Setup ###
