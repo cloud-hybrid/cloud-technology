@@ -1,0 +1,30 @@
+root = true
+
+[*.*]
+charset = UTF-8
+end_of_line = LF
+insert_final_newline = True
+indent_style = Space
+indent_size = 4
+trim_trailing_whitespace = True
+
+[*.json]
+max_line_length = 80
+
+[*.toml]
+max_line_length = 80
+
+[*.rs]
+max_line_length = 120
+
+[*.py]
+max_line_length = 120
+
+[*.yml]
+max_line_length = 120
+
+[*.js]
+max_line_length = 160
+
+[Makefile]
+indent_style = tab
