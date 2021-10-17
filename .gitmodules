@@ -38,3 +38,6 @@
 [submodule "packages/carbon-next-js-template"]
 	path = packages/carbon-next-js-template
 	url = https://github.com/cloud-hybrid/carbon-nextjs-template.git
+[submodule "server/api-next"]
+	path = server/api-next
+	url = https://github.com/cloud-hybrid/api-next.git
