@@ -19,25 +19,12 @@
 [submodule "utilities/subprocess-handler"]
 	path = utilities/subprocess-handler
 	url = https://github.com/cloud-hybrid/subprocess-handler.git
-[submodule "packages/carbon"]
-	path = packages/carbon
-	url = https://github.com/carbon-design-system/carbon-tutorial.git
-	branch = v11-react-step-5
-[submodule "packages/backend-api"]
-	path = packages/backend-api
-	url = https://github.com/cloud-hybrid/backend-api.git
 [submodule "packages/health-check"]
 	path = packages/health-check
 	url = https://github.com/cloud-hybrid/health-check.git
 [submodule "packages/pipeline-builder"]
 	path = packages/pipeline-builder
 	url = https://github.com/cloud-hybrid/pipeline-builder.git
-[submodule "packages/documentation"]
-	path = packages/documentation
-	url = https://github.com/cloud-hybrid/documentation.git
-[submodule "packages/carbon-next-js-template"]
-	path = packages/carbon-next-js-template
-	url = https://github.com/cloud-hybrid/carbon-nextjs-template.git
 [submodule "server/api-next"]
 	path = server/api-next
 	url = https://github.com/cloud-hybrid/api-next.git
