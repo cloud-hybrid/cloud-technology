@@ -16,9 +16,6 @@
 [submodule "packages/health-check"]
 	path = packages/health-check
 	url = https://github.com/cloud-hybrid/health-check.git
-[submodule "server/api-next"]
-	path = server/api-next
-	url = https://github.com/cloud-hybrid/api-next.git
 [submodule "utilities/variable-iterator"]
 	path = utilities/variable-iterator
 	url = https://github.com/cloud-hybrid/variable-iterator.git
