@@ -19,9 +19,6 @@
 [submodule "packages/health-check"]
 	path = packages/health-check
 	url = https://github.com/cloud-hybrid/health-check.git
-[submodule "packages/pipeline-builder"]
-	path = packages/pipeline-builder
-	url = https://github.com/cloud-hybrid/pipeline-builder.git
 [submodule "server/api-next"]
 	path = server/api-next
 	url = https://github.com/cloud-hybrid/api-next.git
