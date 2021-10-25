@@ -10,9 +10,6 @@
 [submodule "packages/ui-template"]
 	path = packages/ui-template
 	url = https://github.com/cloud-hybrid/ui-template.git
-[submodule "utilities/cli"]
-	path = utilities/cli
-	url = https://github.com/cloud-hybrid/cli.git
 [submodule "utilities/parser"]
 	path = utilities/parser
 	url = https://github.com/cloud-hybrid/parser.git
