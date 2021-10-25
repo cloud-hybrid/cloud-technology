@@ -19,3 +19,6 @@
 [submodule "utilities/variable-iterator"]
 	path = utilities/variable-iterator
 	url = https://github.com/cloud-hybrid/variable-iterator.git
+[submodule "packages/api-next"]
+	path = packages/api-next
+	url = https://github.com/cloud-hybrid/api-next.git
