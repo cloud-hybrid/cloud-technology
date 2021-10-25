@@ -25,6 +25,3 @@
 [submodule "server/api-next"]
 	path = server/api-next
 	url = https://github.com/cloud-hybrid/api-next.git
-[submodule "packages/variable-iterator"]
-	path = packages/variable-iterator
-	url = https://github.com/cloud-hybrid/variable-iterator.git
