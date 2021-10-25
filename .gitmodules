@@ -4,9 +4,6 @@
 [submodule "packages/subprocess-handler"]
 	path = packages/subprocess-handler
 	url = https://github.com/cloud-hybrid/subprocess-handler.git
-[submodule "packages/systems-manager"]
-	path = packages/systems-manager
-	url = https://github.com/cloud-hybrid/systems-manager.git
 [submodule "packages/ui-template"]
 	path = packages/ui-template
 	url = https://github.com/cloud-hybrid/ui-template.git
