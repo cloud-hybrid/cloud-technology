@@ -18,5 +18,10 @@
     ],
     "bundledDependencies": [
         "workspaces:packages/*"
-    ]
+    ],
+    "devDependencies": {
+        "axios": "^0.21.4",
+        "axios-cache-adapter": "^2.7.3",
+        "localforage": "^1.10.0"
+    }
 }
