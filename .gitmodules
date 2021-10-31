@@ -25,3 +25,6 @@
 [submodule "packages/json-schema-form"]
 	path = packages/json-schema-form
 	url = https://github.com/rjsf-team/react-jsonschema-form.git
+[submodule "packages/.archive/ibm-cloud-cognitive"]
+	path = packages/.archive/ibm-cloud-cognitive
+	url = https://github.com/carbon-design-system/ibm-cloud-cognitive.git
