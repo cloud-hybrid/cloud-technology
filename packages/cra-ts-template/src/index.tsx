@@ -1,21 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import App from "./App";
-import reportWebVitals from "./Vitals";
+import { default as Application } from "./App";
+import { default as Vitals } from "./Vitals";
 
 import "./index.css";
 
-const Application = () => {
+const Index = () => {
     return (
         <React.StrictMode>
-            <App/>
+            <Application/>
         </React.StrictMode>
     );
 };
 
 ReactDOM.render(
-    (<Application/>), document.getElementById("root")
+    (<Index/>), document.getElementById("$")
 );
 
-reportWebVitals(console.debug);
+Vitals(console.debug);
