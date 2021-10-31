@@ -22,3 +22,6 @@
 [submodule "packages/api-next"]
 	path = packages/api-next
 	url = https://github.com/cloud-hybrid/api-next.git
+[submodule "packages/json-schema-form"]
+	path = packages/json-schema-form
+	url = https://github.com/rjsf-team/react-jsonschema-form.git
