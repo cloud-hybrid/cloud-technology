@@ -54,7 +54,13 @@ const Query = (settings) => new Promise((resolve, reject) => {
         let $;
 
         if (response.statusCode < 200 || response.statusCode >= 400) {
-            return reject(new Error("[Error]" + " " + String(response.statusCode)));
+            if (response.statusCode === 401) { /// Unauthorized
+                return resolve(JSON.stringify({Status: response.statusCode, Message: response.statusMessage}, null, 4));
+            } else if (response.statusCode === 405) { /// Method Not Allowed
+                return resolve(JSON.stringify({Status: response.statusCode, Message: response.statusMessage}, null, 4));
+            } else {
+                return reject(new Error("[Error]" + " " + String(response.statusCode)));
+            }
         }
 
         response.on("data", (chunk) => {
@@ -73,7 +79,7 @@ const Query = (settings) => new Promise((resolve, reject) => {
     Request.end();
 });
 
-const Settings = Configuration("localhost", 3000, "/API/Authentication/Session", "GET");
+const Settings = Configuration("localhost", 3000, "/Health", "GET");
 
 const $ = await Query(Settings);
 
