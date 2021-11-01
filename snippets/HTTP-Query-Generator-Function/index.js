@@ -1,5 +1,9 @@
 import * as HTTPs from "https";
 
+/***
+ * HTTP(s) Request Configuration Object
+ */
+
 const Schema = {
     host: typeof String,
     port: typeof Number,
@@ -22,6 +26,7 @@ const Schema = {
  * @constructor
  *
  */
+
 const Configuration = (host, port, path, method) => {
     return {
         host: host,
