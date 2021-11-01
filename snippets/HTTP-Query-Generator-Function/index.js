@@ -1,17 +1,51 @@
 import * as HTTPs from "https";
 
+const Schema = {
+    host: typeof String,
+    port: typeof Number,
+    path: typeof String,
+    method: typeof String,
+    rejectUnauthorized: typeof Boolean,
+    requestCert: typeof Boolean,
+    agent: typeof Boolean
+};
+
 /***
  *
- * @param url
+ * @param host {string}
+ * @param port {number}
+ * @param path {string}
+ * @param method {string| "GET" | "POST" | "..."}
  *
- * @returns {Promise<String>}
+ * @returns {{rejectUnauthorized: boolean, path, agent: boolean, method, port, requestCert: boolean, host}}
  *
  * @constructor
  *
  */
+const Configuration = (host, port, path, method) => {
+    return {
+        host: host,
+        port: port,
+        path: path,
+        method: method,
+        rejectUnauthorized: false,
+        requestCert: true,
+        agent: false
+    };
+}
 
-const Query = (url) => new Promise((resolve, reject) => {
-    const Request = HTTPs.request(url, (response) => {
+/***
+ *
+ * @returns {Promise<string>}
+ *
+ * @constructor
+ *
+ * @param settings {{rejectUnauthorized: boolean, path, agent: boolean, method, port, requestCert: boolean, host}}
+ *
+ */
+
+const Query = (settings) => new Promise((resolve, reject) => {
+    const Request = HTTPs.request(settings, (response) => {
         let $;
 
         if (response.statusCode < 200 || response.statusCode >= 400) {
@@ -19,7 +53,11 @@ const Query = (url) => new Promise((resolve, reject) => {
         }
 
         response.on("data", (chunk) => {
-            $ += Buffer.alloc((String(chunk).trim().length), chunk);
+            const Allocation = String(Buffer.from(chunk));
+            if (Allocation !== undefined) {
+                ($ === undefined) ? $ = Allocation
+                    : $ += Allocation;
+            }
         });
 
         response.on("end", () => resolve($));
@@ -30,7 +68,9 @@ const Query = (url) => new Promise((resolve, reject) => {
     Request.end();
 });
 
-const $ = await Query("https://google.com");
+const Settings = Configuration("localhost", 3000, "/Health", "GET");
+
+const $ = await Query(Settings);
 
 process.stdout.write($ + "\n");
 
