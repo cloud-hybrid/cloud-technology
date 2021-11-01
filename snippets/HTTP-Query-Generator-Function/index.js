@@ -43,9 +43,9 @@ const Configuration = (host, port, path, method) => {
  *
  * @returns {Promise<string>}
  *
- * @constructor
- *
  * @param settings {{rejectUnauthorized: boolean, path, agent: boolean, method, port, requestCert: boolean, host}}
+ *
+ * @constructor
  *
  */
 
