@@ -27,7 +27,7 @@ const Schema = {
  *
  */
 
-const Configuration = (host, port, path, method) => {
+export const Configuration = (host, port, path, method) => {
     return {
         host: host,
         port: port,
@@ -49,7 +49,7 @@ const Configuration = (host, port, path, method) => {
  *
  */
 
-const Query = (settings) => new Promise((resolve, reject) => {
+export const Query = (settings) => new Promise((resolve, reject) => {
     const Request = HTTPs.request(settings, (response) => {
         let $;
 
@@ -78,6 +78,10 @@ const Query = (settings) => new Promise((resolve, reject) => {
 
     Request.end();
 });
+
+export default Query;
+
+/// --> Testing
 
 const Settings = Configuration("localhost", 3000, "/Health", "GET");
 
