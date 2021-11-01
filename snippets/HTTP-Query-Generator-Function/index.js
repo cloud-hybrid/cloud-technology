@@ -73,7 +73,7 @@ const Query = (settings) => new Promise((resolve, reject) => {
     Request.end();
 });
 
-const Settings = Configuration("localhost", 3000, "/Health", "GET");
+const Settings = Configuration("localhost", 3000, "/API/Authentication/Session", "GET");
 
 const $ = await Query(Settings);
 
