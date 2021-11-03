@@ -25,3 +25,9 @@
 [submodule "packages/.archive/ibm-cloud-cognitive"]
 	path = packages/.archive/ibm-cloud-cognitive
 	url = https://github.com/carbon-design-system/ibm-cloud-cognitive.git
+[submodule "packages/api"]
+	path = packages/api
+	url = https://github.com/cloud-hybrid/api.git
+[submodule "library/api-library"]
+	path = library/api-library
+	url = https://github.com/cloud-hybrid/api-library.git
