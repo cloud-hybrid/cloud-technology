@@ -4,6 +4,7 @@
     "private": true,
     "license": "BSD-3-Clause",
     "readme": "README.md",
+    "engines": { "node": "^16.x" },
     "scripts": {
         "start.ui-template": "cd ./packages/ui-template && npm run start",
         "build.ui-template": "cd ./packages/ui-template && npm run build",
@@ -12,16 +13,12 @@
     },
     "repository": "git+https://github.com/cloud-hybrid/cloud-technology.git",
     "workspaces": [
+        "library/*",
         "packages/*",
         "documentation/*",
         "utilities/*"
     ],
     "bundledDependencies": [
         "workspaces:packages/*"
-    ],
-    "devDependencies": {
-        "axios": "^0.21.4",
-        "axios-cache-adapter": "^2.7.3",
-        "localforage": "^1.10.0"
-    }
+    ]
 }
