@@ -9,7 +9,8 @@
         "start.ui-template": "cd ./packages/ui-template && npm run start",
         "build.ui-template": "cd ./packages/ui-template && npm run build",
         "install.ui-template": "cd ./packages/ui-template && npm install .",
-        "serve.ui-template": "cd ./packages/ui-template && serve -s ./build"
+        "serve.ui-template": "cd ./packages/ui-template && serve -s ./build",
+        "login": "npm adduser"
     },
     "repository": "git+https://github.com/cloud-hybrid/cloud-technology.git",
     "workspaces": [
