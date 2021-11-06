@@ -31,6 +31,4 @@
 [submodule "library/api-library"]
 	path = library/api-library
 	url = https://github.com/cloud-hybrid/api-library.git
-[submodule "packages/axios-cache-adapter"]
-	path = packages/axios-cache-adapter
-	url = https://github.com/cloud-hybrid/axios-cache-adapter.git
+	
