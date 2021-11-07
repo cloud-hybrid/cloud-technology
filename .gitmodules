@@ -1,9 +1,6 @@
 [submodule "packages/github-api"]
 	path = packages/github-api
 	url = https://github.com/cloud-hybrid/github-api.git
-[submodule "packages/subprocess-handler"]
-	path = packages/subprocess-handler
-	url = https://github.com/cloud-hybrid/subprocess-handler.git
 [submodule "packages/ui-template"]
 	path = packages/ui-template
 	url = https://github.com/cloud-hybrid/ui-template.git
