@@ -1,0 +1,15 @@
+{
+    "name": "@cloud-technology/cli-arguments-snippet",
+    "version": "0.0.1",
+    "private": true,
+    "author": "Jacob B. Sandes",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "setup": "npm install ."
+    },
+    "dependencies": {
+        "commander": "latest"
+    }
+}
