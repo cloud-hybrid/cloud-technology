@@ -28,7 +28,6 @@
 [submodule "library/api-library"]
 	path = library/api-library
 	url = https://github.com/cloud-hybrid/api-library.git
-	
 [submodule "utilities/npm-outdated"]
 	path = utilities/npm-outdated
 	url = https://github.com/cloud-hybrid/npm-outdated.git
