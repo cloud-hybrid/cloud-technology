@@ -1,4 +1,4 @@
-const { Service, Response } = require("./../index.js");
+const { Service, Response } = require("./../module.js");
 
 const Schema = (Properties) => {
     return {

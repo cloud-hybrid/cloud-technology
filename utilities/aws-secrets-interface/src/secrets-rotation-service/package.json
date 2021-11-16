@@ -1,7 +1,7 @@
 {
     "name": "@cloud-technology/secrets-rotation-service",
     "description": "...",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "private": false,
     "dependencies": {
         "aws-sdk": "^2.799.0"

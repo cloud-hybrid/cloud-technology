@@ -1,6 +1,6 @@
 /***
  *
- * @type {SecretsManager}
+ * @type {import("aws-sdk/clients/secretsmanager.js")} Client
  *
  */
 
@@ -44,7 +44,7 @@ module.exports.Response = Response;
 
 /***
  *
- * @type {{Response: (function((String|JSON), Number=, {}=): {headers: {"X-Deployment-Version": string | undefined, Server: string, "Content-Type": string}, body: String|JSON, statusCode: Number}), Service: SecretsManager, Client: SecretsManager}}
+ * @type {{Response: (function((String|JSON), Number=, {}=): {headers: {"X-Deployment-Version": string | undefined, Server: string, "Content-Type": string}, body: String|JSON, statusCode: Number}), Service: Service, Client: Client}}
  *
  */
 

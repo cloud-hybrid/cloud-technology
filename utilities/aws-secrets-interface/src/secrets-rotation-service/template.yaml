@@ -23,34 +23,36 @@ Resources:
     List: # --> List All Secrets, Sanitized
         Type: AWS::Serverless::Function
         Properties:
-            Handler: !Join [ "/", [ "src", "list-secrets", *Handler ] ]
+            Handler: !Join [ "/", [ "src", "list-secrets", "src", *Handler ] ]
             MemorySize: *Memory
-            Events: *GET
+            Events: { API: { Type: "Api", Properties: { Path: "/api/secrets", Method: "GET" } } }
+            # --> Events: *GET
 
             Description: "List All Secrets, Sanitized"
 
-    Extended: # --> List All Secrets, Sanitized, Administrative
+    Administration: # --> List All Secrets, Sanitized, Administrative
         Type: AWS::Serverless::Function
         Properties:
-            Handler: !Join [ "/", [ "src", "list-secrets-extended", *Handler ] ]
+            Handler: !Join [ "/", [ "src", "administration", "src", *Handler ] ]
             MemorySize: *Memory
-            Events: { API: { Type: "Api", Properties: { Path: "/extended", Method: "GET" } } }
+            Events: { API: { Type: "Api", Properties: { Path: "/api/secrets/administration", Method: "GET" } } }
 
             Description: "List All Secrets, Sanitized, Administrative"
 
-    Index: # --> Get Secret via AWS-ID, ARN, ID
+    Query: # --> Get Secret via AWS-ID, ARN, ID
         Type: AWS::Serverless::Function
         Properties:
-            Handler: !Join [ "/", [ "src", "get-secret", *Handler ] ]
+            Handler: !Join [ "/", [ "src", "get-secret", "src", *Handler ] ]
             MemorySize: *Memory
-            Events: { API: { Type: "Api", Properties: { Path: "/secret", Method: "GET", RequestParameters: [ method.request.querystring: { Required: True, Caching: False } ] } } }
+            Events: { API: { Type: "Api", Properties: { Path: "/api/secret", Method: "GET", RequestParameters: [ method.request.querystring: { Required: True, Caching: False } ] } } }
 
             Description: "Get Secret via AWS-ID, ARN, ID"
 
 Outputs:
-    WebEndpoint:
-        Description: "API Gateway endpoint URL for Prod stage"
+    Endpoint:
+        Description: "API Gateway URL"
         Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/"
+
     Functions:
         Description: "Lambda Functions"
         Value: [
@@ -61,6 +63,6 @@ Outputs:
                 Reference: !Ref Extended
             },
             {
-                Reference: !Ref Index
+                Reference: !Ref Query
             }
         ]
