@@ -1,5 +1,8 @@
 # [...] #
 
+- [ ] Use DocDB to create a Mapping for ID -> Secret-Name
+  - [ ] When creating Secret(s), Validate DocDB Name Uniqueness Prior to Storing
+
 ## Overview ##
 
 A production-ready serverless deployable that will automatically rotate 
