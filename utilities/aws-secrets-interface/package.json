@@ -1,0 +1,10 @@
+{
+  "name": "aws-secrets-interface",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}
