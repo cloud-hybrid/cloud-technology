@@ -89,7 +89,7 @@ const Query = async (identifier) => {
     if (identifier === "") return { Response: Empty(), validator: { Error: true } };
 
     try {
-        const Secret = await Service.describeSecret({ SecretId: identifier }).promise();
+        const Secret = await Service.describeSecret({ SecretId: identifier });
         const Model = Schema(Secret);
 
         return Response(JSON.stringify({ Secret: Model }, null, 4))

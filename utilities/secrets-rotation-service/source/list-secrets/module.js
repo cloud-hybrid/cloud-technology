@@ -1,18 +1,13 @@
-/***
- *
- * @type {import("aws-sdk/clients/secretsmanager.js")} Client
- *
- */
+/// import { SecretsManager as Client } from "@aws-sdk/client-secrets-manager";
+/// export const Service = new Client({
+///     apiVersion: "latest"
+/// });
 
-const Client = require("aws-sdk/clients/secretsmanager.js");
-
-/***
- *
- * @type {SecretsManager} Service
- *
- */
-
-const Service = new Client({apiVersion: "latest"});
+const { SecretsManager } = require("@aws-sdk/client-secrets-manager");
+const Client = SecretsManager;
+const Service = new Client({
+    apiVersion: "latest"
+});
 
 /***
  *
@@ -26,6 +21,7 @@ const Service = new Client({apiVersion: "latest"});
  *
  */
 
+/// export const Response = (body, status = 200, headers = {}) => {
 const Response = (body, status = 200, headers = {}) => {
     return {
         statusCode: status, body, headers: {
@@ -47,6 +43,10 @@ module.exports.Response = Response;
  * @type {{Response: (function((String|JSON), Number=, {}=): {headers: {"X-Deployment-Version": string | undefined, Server: string, "Content-Type": string}, body: String|JSON, statusCode: Number}), Service: Service, Client: Client}}
  *
  */
+
+/// export default {
+///     Client, Service, Response
+/// };
 
 module.exports.default = {
     Client, Service, Response

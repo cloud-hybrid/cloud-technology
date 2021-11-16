@@ -1,18 +1,8 @@
-/***
- *
- * @type {import("aws-sdk/clients/secretsmanager.js")} Client
- *
- */
-
-const Client = require("aws-sdk/clients/secretsmanager.js");
-
-/***
- *
- * @type {SecretsManager} Service
- *
- */
-
-const Service = new Client({apiVersion: "latest"});
+const { SecretsManager } = require("@aws-sdk/client-secrets-manager");
+const Client = SecretsManager;
+const Service = new Client({
+    apiVersion: "latest"
+});
 
 /***
  *

@@ -1,24 +1,28 @@
+/// import { Service, Response } from "./../module.js";
+
 const { Service, Response } = require("./../module.js");
 
 const Schema = (Properties) => {
+    const Tags = Properties.Tags?.filter(($) => !(String($.Key).includes("aws")));
+
     return {
-        "AWS-ID": Properties?.ARN,
         "Name": Properties?.Name,
         "Description": Properties?.Description,
-        "Key-ID": Properties?.KmsKeyId,
         "Creation-Date": Properties?.CreatedDate,
         "Modification-Date": Properties?.LastChangedDate,
         "Access-Date": Properties?.LastAccessedDate,
-        "Tags": Properties?.Tags
+        "Tags": Tags || Properties?.Tags
     };
 }
 
-exports.handler = async (event) => {
+console.log("Loading Function .....");
+/// export default async (event) => {
+module.exports.handler = async (event) => {
     console.info("Received Trigger Event" + ":", JSON.stringify(event, null, 4));
 
     const Container = [];
 
-    let $ = await Service.listSecrets({MaxResults: 20, SortOrder: "asc", Filters: null, NextToken: null}).promise();
+    let $ = await Service.listSecrets({MaxResults: 20, SortOrder: "asc", Filters: null, NextToken: null});
 
     while ($.NextToken) {
         $.SecretList.forEach((Secret) => {
@@ -33,12 +37,12 @@ exports.handler = async (event) => {
             SortOrder: "asc",
             Filters: null,
             NextToken: Token
-        }).promise();
+        });
     }
 
     console.info("Secrets-List" + ":", Container);
 
-    const Body = JSON.stringify({ Secrets: Container, Trigger: event }, null, 4);
+    const Body = JSON.stringify({ Secrets: Container }, null, 4);
 
     console.info("Data" + ":", Body);
 
