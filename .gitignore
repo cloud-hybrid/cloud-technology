@@ -82,3 +82,5 @@ dist
 .idea
 .vscode
 .eclipse
+
+.aws-sam
