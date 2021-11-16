@@ -1,0 +1,23 @@
+{
+    "name": "cloud-technology",
+    "version": "0.0.0",
+    "private": true,
+    "license": "BSD-3-Clause",
+    "readme": "README.md",
+    "engines": {
+        "node": "^16.x"
+    },
+    "scripts": {
+        "login": "npm adduser"
+    },
+    "repository": "git+https://github.com/cloud-hybrid/cloud-technology.git",
+    "workspaces": [
+        "library/*",
+        "packages/*",
+        "documentation/*",
+        "utilities/*"
+    ],
+    "bundledDependencies": [
+        "workspaces:packages/*"
+    ]
+}

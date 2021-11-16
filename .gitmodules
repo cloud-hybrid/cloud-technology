@@ -32,3 +32,6 @@
 [submodule "utilities/npm-outdated"]
 	path = utilities/npm-outdated
 	url = https://github.com/cloud-hybrid/npm-outdated.git
+[submodule "utilities/cli-prompt"]
+	path = utilities/cli-prompt
+	url = https://github.com/cloud-hybrid/cli-prompt.git
